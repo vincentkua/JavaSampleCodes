@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <h2>Pokedex Page</h2>
+
+
+    <div class="table-bordered">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 15px;">Pokedex</th>
+                    <th  style="width: 500px;">Name</th>
+                    <th style="width: 100px;">Level</th>
+                    <th style="width: 100px;">hp</th>
+                    <th style="width: 100px;">attack</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <tr data-th-each="pkm:${pokemons}">
+                        <td data-th-text="${pkm.pokemonID}"></td>
+                        <td  data-th-text="${pkm.name}"></td>
+                        <td data-th-text="${pkm.level}"></td>
+                        <td  data-th-text="${pkm.hp}"></td>
+                        <td  data-th-text="${pkm.attack}"></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+</body>
+</html>
