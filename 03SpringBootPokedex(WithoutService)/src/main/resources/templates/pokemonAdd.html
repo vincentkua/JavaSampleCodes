@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Pokemon</title>
+  </head>
+  <body>
+    <h3>Add Pokemon</h3>
+    <form method="POST" th:action="@{/addnew}" th:object="${pokemon}">
+      <div>
+        <label for="id">ID:</label>
+        <input type="number" name="id" th:field="*{id}" />
+      </div>
+      <div style="background-color: red;" th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></div>
+      <div>
+        <label for="name">NAME:</label>
+        <input type="text" name="name" th:field="*{name}" />
+      </div>
+      <div style="background-color: red;" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+      <div>
+        <label for="power">POWER:</label>
+        <input type="text" name="power" th:field="*{power}" />
+      </div>
+      <div style="background-color: red;" th:if="${#fields.hasErrors('power')}" th:errors="*{power}"></div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

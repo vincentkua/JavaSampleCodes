@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>
+      <span>Pokedex Page</span>
+      <a th:href="@{/addnew}" style="font-size: 14px; color: red;">Add New</a>
+    </h3>
+
+    <table>
+      <thead>
+        <th style="width: 60px">ID</th>
+        <th style="width: 120px">Name</th>
+        <th style="width: 90px">Power</th>
+      </thead>
+
+      <tbody data-th-each="pokemon : ${pokemons}">
+        <td data-th-text="${pokemon.id}"></td>
+        <td data-th-text="${pokemon.name}"></td>
+        <td data-th-text="${pokemon.power}"></td>
+      </tbody>
+    </table>
+  </body>
+</html>
