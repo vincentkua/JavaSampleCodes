@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/">Back to Home</a>
+    <h3>Page07 - Forms (Get Method)</h3>
+    <hr />
+    <p>This Page Show the Example Forms submission</p>
+    <form action="/page07/get" method="get">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" />
+      <br />
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <hr />
+    <p>Data Received and Returned From Controller:</p>
+    <li data-th-text="${name}"></li>
+    <li data-th-text="${email}"></li>
+  </body>
+</html>

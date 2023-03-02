@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+  </head>
+  <body>
+    <a href="/">Back to Home</a>
+    <h3>All Contact</h3>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>DOB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-th-each="contact:${contacts}">
+            <td data-th-text="${contact.name}"></td>
+            <td data-th-text="${contact.email}"></td>
+            <td data-th-text="${contact.phone}"></td>
+            <td data-th-text="${#dates.format(contact.dob, 'dd-MM-yyyy')}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

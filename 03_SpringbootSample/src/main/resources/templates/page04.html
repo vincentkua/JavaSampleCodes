@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/">Back to Home</a>
+    <h3>Page04 - Map for each</h3>
+    <hr />
+    <p>This Page Show the Example to Use the Attribute from the Controller</p>
+    <br />
+    <hr />
+    <p>Attr(LinkedList) From Controller =</p>
+
+    <ul>
+      <li data-th-each="item:${fruits}">
+        <span data-th-text="${item}"></span>
+      </li>
+    </ul>
+
+  </body>
+</html>

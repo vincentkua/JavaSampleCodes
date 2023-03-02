@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/">Back to Home</a>
+    <h3>Page10 - Autowired , Repository , Model (Sample App - Pokedex)</h3>
+    <hr />
+    <form action="/page10" method="post">
+      <label for="pokemonid">Pokemon ID :</label>
+      <input type="text" name="pokemonid" id="pokemonid" />
+      <br />
+      <label for="name">Pokemon Name :</label>
+      <input type="text" name="name" id="name" />
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <p>Pokemon Registry:</p>
+    <ul>
+      <li data-th-each="pkm:${pokemons}">
+        <span data-th-text="${pkm.pokemonid}"></span>
+        <span>-</span>
+        <span data-th-text="${pkm.name}"></span>
+        <a data-th-href="@{/page10/delete/{i}(i=${pkm.pokemonid})}">Delete</a>
+      </li>
+    </ul>
+
+    <br />
+    <br />
+  </body>
+</html>

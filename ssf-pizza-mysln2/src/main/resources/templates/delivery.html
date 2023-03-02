@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .f-col2 {
+        position: absolute;
+        left: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Order Delivery Details</h3>
+
+    <form
+      action="/pizza/order"
+      method="POST"
+      data-th-object="${delivery}"
+      style="position: relative"
+    >
+      <label for="name">Name : </label>
+      <input
+        class="f-col2"
+        type="text"
+        name="name"
+        id="name"
+        data-th-field="*{name}"
+        placeholder="Placeholder"
+      />
+      <div data-th-if="${#fields.hasErrors('name')}">
+        <span data-th-errors="*{name}" style="color: red"></span>
+      </div>
+      <br />
+      <label for="address">Address : </label>
+      <input
+        class="f-col2"
+        type="text"
+        name="address"
+        id="address"
+        data-th-field="*{address}"
+        placeholder="Placeholder"
+      />
+      <div data-th-if="${#fields.hasErrors('address')}">
+        <span data-th-errors="*{address}" style="color: red"></span>
+      </div>
+      <br />
+      <label for="phone">Phone : </label>
+      <input
+        class="f-col2"
+        type="tel"
+        name="phone"
+        id="phone"
+        data-th-field="*{phone}"
+        placeholder="Placeholder"
+      />
+      <div data-th-if="${#fields.hasErrors('phone')}">
+        <span data-th-errors="*{phone}" style="color: red"></span>
+      </div>
+      <br />
+      <label for="rush">Rush : </label>
+      <input
+        class="f-col2"
+        type="checkbox"
+        name="rush"
+        id="rush"
+        data-th-field="*{rush}"
+      />
+      <br />
+      <label for="comments">Comments : </label>
+      <input
+        class="f-col2"
+        type="text"
+        name="comments"
+        id="comments"
+        data-th-field="*{comments}"
+        placeholder="Placeholder"
+      />
+      <div data-th-if="${#fields.hasErrors('comments')}">
+        <span data-th-errors="*{comments}" style="color: red"></span>
+      </div>
+      <br />
+      <br />
+
+      <a href="/">Cancel Order</a>
+      <button type="submit" formmethod="GET" formaction="/">
+        Cancel Order
+      </button>
+      <button type="submit">Place Order</button>
+    </form>
+  </body>
+</html>

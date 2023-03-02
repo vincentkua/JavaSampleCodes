@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Page</title>
+  </head>
+  <body>
+    <a href="/">Back to Home</a>
+    <h3>Page01 - Home Page (Index)</h3>
+    <hr />
+    <p style="font-weight: bold;">Notes</p>
+    <li>This is index.html page located in the resource/static folder</li>
+    <li>The Project Folder Name cannot contain any space , it will cause the controller not working correctly</li>
+    <li>When using return template statement, do not use return "/template2.html" or "/template2". The "/" statement is not working on railway !!!</li>
+    <li>Compile and start the server using mvn spring-boot:run</li>
+    <li>
+      Change the default port at application.properties with server.port = 3000
+    </li>
+    <!-- <button onclick="location.href = 'page2'">Go Dynamic Page</button> -->
+    <!-- <a href="page2">Next Page</a> -->
+
+    <hr />
+    <p style="font-weight: bold;">Index</p>
+    <a href="/">Page01 - Home Page (index)</a> <br />
+    <a href="/page02">Page02 - Return Empty Template</a> <br />
+    <a href="/page02/subpage">Page02 - Return Empty Subpage</a><br />
+    <a href="/page03">Page03 - Model and model.addattribute</a><br />
+    <a href="/page04">Page04 - Model Return List and Render it in Template</a><br />
+    <a href="/page05">Page05 - Page Redirect</a><br />
+    <a href="/page07">Page07 - Form Get Method (RequestParam)</a><br />
+    <a href="/page08">Page08 - Form Post Method (RequestBody)</a><br />
+    <a href="/page09">Page09 - PathVariable</a><br />
+    <a href="/page10">Page10 - Autowired , Repository , Model (Sample App - Pokedex)</a><br />
+  </body>
+</html>

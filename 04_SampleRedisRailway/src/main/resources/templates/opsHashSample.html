@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/">Back to Index</a>
+    <h3>opsHash Sample</h3>
+    <form action="/opsHash" method="post">
+      <label for="name">Name : </label>
+      <input type="text" name="name" id="name" />
+      <br />
+      <label for="email">Email : </label>
+      <input type="email" name="email" id="email" />
+      <br />
+      <label for="phone">Phone : </label>
+      <input type="tel" name="phone" id="phone" />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <p>Redis Data (contact):</p>
+    <p data-th-text="${contact}"></p>
+    Name: <span data-th-text="${contactobj.name}"></span> <br />
+    Email: <span data-th-text="${contactobj.email}"></span> <br />
+    Phone: <span data-th-text="${contactobj.phone}"></span> <br />
+  </body>
+</html>

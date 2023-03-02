@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaHot</title>
+    <style> body {background-color: #E7E8EA;}</style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <img src="../static/images/Pizza logo.jpg" alt="logo">
+                </td>
+                <td>
+                    <h1>Pizza Hot</h1>
+                </td>
+            </tr>
+            <tr><td><h2> Select a Pizza</h2></td></tr>
+        </table>
+        <table>
+            <tr>
+                <th><img src="../static/images/Bella.jpg" alt="" width="170px"></th>
+                <th><img src="../static/images/Margherita.jpg" alt="" width="170px"></th>
+                <th><img src="../static/images/Marinara.jpg" alt="" width="170px"></th>
+                <th><img src="../static/images/Spianata Calabrese.jpg" alt="" width="170px"></th>
+                <th><img src="../static/images/Trio Formaggio.jpg" alt="" width="170px"></th>
+            </tr>
+            <form action="/pizza" method="POST">
+                <tr>
+                    <td>
+                        <input type="radio" name="Bella">Bella
+                    </td>
+                    <td>
+                        <input type="radio" name="Margherita">Margherita                    
+                    </td>
+                    <td>
+                        <input type="radio" name="Marinara">Marinara                    
+                    </td>
+                    <td>
+                        <input type="radio" name="Spianata">Spianata Calabrese                
+                    </td>
+                    <td>
+                        <input type="radio" name="Trio">Trio Formaggio                    
+                    </td>                 
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>
+                        <select name="size" id="size" style="width: 100%;">
+                            <option value="Small">Small</option>
+                            <option value="Small">Medium</option>
+                            <option value="Small">Large</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td>
+                        <input type="number" placeholder="*1 - 10*">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">Next</button>
+                    </td>
+                </tr>
+            </form>
+
+        </table>
+
+    </div>
+</body>
+</html>

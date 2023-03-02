@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/">Back to Home</a>
+    <h3>Page08 - Forms (Post Method)</h3>
+    <hr />
+    <p>This Page Show the Example Forms submission</p>
+    <form action="/page08/post" method="post">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" />
+      <br />
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" />
+      <br />
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <p>Data Received and Returned From Controller:</p>
+    <li data-th-text="${name}"></li>
+    <li data-th-text="${email}"></li>
+    <li data-th-text="${age}"></li>
+
+    <br />
+    <br />
+  </body>
+</html>

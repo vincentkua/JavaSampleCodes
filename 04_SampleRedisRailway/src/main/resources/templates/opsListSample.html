@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/">Back to Index</a>
+    <h3>opsList Sample</h3>
+    <form action="/opsList" method="post">
+      <input type="text" name="fruit" id="fruit" />
+      <button type="submit">Submit</button>
+    </form>
+    <a href="/opsList/rightpop">rightpop</a>
+    <br />
+    <hr />
+
+    <p>Redis Data (fruit):</p>
+    <!-- <p data-th-text="${fruits}"></p> -->
+    <li data-th-each="fruit,stat:${fruits}">
+      <span data-th-text="${fruit}"></span>
+      <a data-th-href="@{/opsList/delete/{i}(i = ${stat.index})}">Delete</a>
+    </li>
+  </body>
+</html>

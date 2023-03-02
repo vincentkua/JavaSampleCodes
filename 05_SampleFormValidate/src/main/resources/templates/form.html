@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Sample Form Validation</h3>
+
+    <form action="/form" method="post" data-th-object="${contact}">
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" data-th-field="*{name}" />
+        <div
+          data-th-if="${#fields.hasErrors('name')}"
+          data-th-errors="*{name}"
+          style="color: red"
+        ></div>
+      </div>
+
+      <div>
+        <label for="name">Email: </label>
+        <input type="email" name="email" id="email" data-th-field="*{email}" />
+        <div
+          data-th-if="${#fields.hasErrors('email')}"
+          data-th-errors="*{email}"
+          style="color: red"
+        ></div>
+      </div>
+
+      <div>
+        <label for="phone">Phone: </label>
+        <input type="tel" name="phone" id="phone" data-th-field="*{phone}" />
+        <div
+          data-th-if="${#fields.hasErrors('phone')}"
+          data-th-errors="*{phone}"
+          style="color: red"
+        >
+        </div>
+      </div>
+
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
